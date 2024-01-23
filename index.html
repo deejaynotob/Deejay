@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downtime Machine Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Downtime Machine Tracker</h1>
+    </header>
+
+    <main>
+        <!-- Input Data Screen -->
+        <div id="input-screen" class="screen">
+            <h2>Input Machine Data</h2>
+            <form id="input-form">
+                <!-- Machine ID Dropdown -->
+                <div class="input-group">
+                    <label for="machine-id">Machine ID:</label>
+                    <div class="scrollable-dropdown">
+                        <select id="machine-id">
+                            <option value="RT-01">RT-01</option>
+                            <option value="RT-02">RT-02</option>
+                            <option value="RT-03">RT-03</option>
+                            <option value="RT-04">RT-04</option>
+                            <option value="RT-05">RT-05</option>
+                            <option value="RT-06">RT-06</option>
+                            <option value="RT-07">RT-07</option>
+                            <option value="RT-08">RT-08</option>
+                            <option value="RT-09">RT-09</option>
+                            <option value="RT-10">RT-10</option>
+                            <option value="RT-11">RT-11</option>
+                            <option value="RT-12">RT-12</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+<!-- Machine Status Dropdown -->
+<div class="input-group">
+    <label for="machine-status">Machine Status:</label>
+    <div class="scrollable-dropdown">
+        <select id="machine-status">
+            <!-- Set the default value to an empty string -->
+            <option value="">Select Status</option>
+            <option value="Running">Running</option>
+            <option value="Idle">Idle</option>
+            <option value="Down">Down</option>
+            <option value="For Qualification">For Qualification</option> <!-- Updated option -->
+            <option value="For PM">For PM</option> <!-- New option -->
+            <option value="For Setup">For Setup</option> <!-- New option -->
+        </select>
+    </div>
+</div>
+
+
+<!-- Comments Input -->
+<div class="input-group">
+    <label for="comments">Comments:</label>
+</div>
+<textarea id="comments" rows="4" style="resize: vertical; min-height: 80px; width: 400px;"></textarea>
+
+
+
+                <!-- Submit Button -->
+                <div class="button-container">
+                    <button type="button" id="submit-button">Submit</button>
+                    <button type="button" id="view-status-button">View Status</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Machine Status Screen -->
+        <div id="status-screen" class="screen">
+            <h2>Machine Status</h2>
+            <main class="second-screen">
+             
+                <div class="machine-container">
+    
+                <div class="machine" id="machine-RT-01">
+                    <h3>RT-01</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-02">
+                    <h3>RT-02</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-03">
+                    <h3>RT-03</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-04">
+                    <h3>RT-04</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-05">
+                    <h3>RT-05</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-06">
+                    <h3>RT-06</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-07">
+                    <h3>RT-07</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-08">
+                    <h3>RT-08</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-09">
+                    <h3>RT-09</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-10">
+                    <h3>RT-10</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-11">
+                    <h3>RT-11</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                <div class="machine" id="machine-RT-12">
+                    <h3>RT-12</h3>
+                    <p class="status">Status: Idle</p>
+                </div>
+                </div>
+
+              <!-- Navigation Buttons -->
+             <div class="navigation-buttons">
+                <button type="button" id="go-back-to-input-button">Go Back to Input</button>
+                <button type="button" id="view-log-history-button">View Log History</button>
+            </div>
+        </main> 
+    </div>
+
+        <!-- Log History Screen -->
+<!-- Log History Screen -->
+<div id="log-history-screen">
+    <h2>Log History</h2>
+    <table id="log-history-content" class="log-table">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Machine ID</th>
+                <th>Status</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Log history entries will be displayed here -->
+        </tbody>
+    </table>
+    <button type="button" id="go-back-to-status-button">Go Back to Status</button>
+</div>
+
+
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
